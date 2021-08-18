@@ -1,2 +1,2 @@
 # fsopen-be
-Fullstack Open 2021 - Backend
+Full Stack open 2021 - Backend

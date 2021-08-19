@@ -1,0 +1,28 @@
+{
+  "name": "fsopen-be",
+  "version": "1.0.0",
+  "description": "Full Stack open 2021 - Backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xkhaven/fsopen-be.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xkhaven/fsopen-be/issues"
+  },
+  "homepage": "https://github.com/xkhaven/fsopen-be#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

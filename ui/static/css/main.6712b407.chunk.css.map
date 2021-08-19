@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,SACE,wBAAyB,CACzB,WAAY,CACZ,YACF,CAEA,OACE,kBACF,CAEA,QACE,kBACF","file":"main.6712b407.chunk.css","sourcesContent":[".message {\n  border: 2px solid #4A4A4A;\n  margin: 10px;\n  padding: 10px;\n}\n\n.error {\n  background: #FF5733;\n}\n\n.notify {\n  background: #90EE90;\n}\n"]}

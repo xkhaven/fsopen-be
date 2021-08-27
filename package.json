@@ -10,7 +10,8 @@
     "build:ui": "rm -rf build && cd ~/Workspace/fsopen/osa3/puhelinluettelo && npm run build --prod && cp -r build ~/Workspace/fsopen-be/",
     "deploy": "git push heroku main",
     "deploy:full": "npm run build:ui && git add . && git commit -m ui-build && git push && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -32,6 +33,7 @@
     "static": "^2.0.0"
   },
   "devDependencies": {
+    "eslint": "^7.32.0",
     "nodemon": "^2.0.12"
   }
 }

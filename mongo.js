@@ -27,7 +27,7 @@ if (process.argv[3] && process.argv[4]) {
 
   person
     .save()
-    .then(response => {
+    .then(() => {
       console.log(`${process.argv[3]} – ${process.argv[4]} saved!`)
       mongoose.connection.close()
     })

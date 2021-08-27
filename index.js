@@ -5,7 +5,7 @@ const cors = require('cors')
 const app = express()
 const Person = require('./models/person')
 const requestLogger = () => {
-  morgan.token('body', function (req, res) {
+  morgan.token('body', function (req) {
     if (req.method === 'POST') {
       return JSON.stringify(req.body)
     }
@@ -22,7 +22,7 @@ app.get('/', (request, response) => {
   response.send('<h1>Hello World!</h1>')
 })
 
-app.get('/info', (request, response) => {
+app.get('/info', (request, response, next) => {
   Person.find({})
     .then(persons => {
       const count = persons.length
@@ -70,7 +70,7 @@ app.post('/api/persons', (request, response, next) => {
 
 app.delete('/api/persons/:id', (request, response, next) => {
   Person.findByIdAndRemove(request.params.id)
-    .then(result => response.status(204).end())
+    .then(() => response.status(204).end())
     .catch(error => next(error))
 })
 
@@ -88,7 +88,7 @@ app.put('/api/persons/:id', (request, response, next) => {
     number: body.number
   }
 
-  Person.findByIdAndUpdate(request.params.id, entry, {new: true})
+  Person.findByIdAndUpdate(request.params.id, entry, { new: true })
     .then(result => response.json(result))
     .catch(error => next(error))
 })
